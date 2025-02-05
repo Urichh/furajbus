@@ -1,0 +1,9 @@
+<div class="collapsible-container">
+    <div class="title-bar" (click)="toggleExpand()">
+        <h3>{{ title }}</h3>
+        <span [class.rotate]="isExpanded">▼</span>
+    </div>
+    <div *ngIf="isExpanded" class="content">
+        <ng-content></ng-content>
+    </div>
+</div>  
