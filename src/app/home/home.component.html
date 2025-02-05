@@ -1,5 +1,6 @@
 <div id="bg" class="flex flex-col items-center justify-center min-h-screen text-center px-6">
-    <img src="../../karte_default.png" id="banner" alt="logo?" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" style="margin-top: -5em" />
+    <!-- ce exandable sectione zaprem patl gre content out of bounds (cez topbar) - fix pls -->
+    <img src="../../karte_default.png" id="banner" alt="logo?" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
 
     <h1 class="text-4xl font-bold mb-4">furajbus</h1>
     <p class="text-lg text-gray-600 max-w-lg">
@@ -29,8 +30,12 @@
         </section>
 
         <app-collapsible-section [title]="'wani wana wanis'">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat vehicula leo, at vestibulum arcu dictum at.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat vehicula leo, at vestibulum arcu dictum at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat vehicula leo, at vestibulum arcu dictum at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat vehicula leo, at vestibulum arcu dictum at.</p>
         </app-collapsible-section>  
+
+        <app-collapsible-section [title]="'wani wana wanis'">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat vehicula leo, at vestibulum arcu dictum at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat vehicula leo, at vestibulum arcu dictum at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat vehicula leo, at vestibulum arcu dictum at.</p>
+        </app-collapsible-section> 
 
     </div>
 </div>
