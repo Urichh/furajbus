@@ -9,3 +9,8 @@
     height: auto;
     display: block;
 }*/
+
+#bg {
+    background-color: #87c28265;
+    background-image: url("../public/asfalt-dark.png");
+}
