@@ -1,36 +1,29 @@
-<div id="bg" class="flex flex-col items-center justify-center min-h-screen text-center px-6">
+<div id="bg" class="flex flex-col items-center justify-center min-h-screen px-6">
     <!-- ce exandable sectione zaprem patl gre content out of bounds (cez topbar) - fix pls -->
     <img src="../../karte_default.png" id="banner" alt="logo?" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
 
-    <h1 class="text-4xl font-bold mb-4">furajbus</h1>
-    <p class="text-lg text-gray-600 max-w-lg">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet ligula ut felis aliquam scelerisque.
+    <h1 class="text-4xl font-bold mb-4">Pivska igra avtobus (piramida)</h1>
+    <p class="text-lg max-w-lg">
+        Avtobus (občasno znan tudi kot piramida) je popularna pivska igra, kjer igralci odkrivajo karte piramide in ostalim igralcem dodeljujejo požirke pijače glede
+        na različne faktorje.<br /><br /> Cilj te spletne strani je standardizacija in specifikacija pravil igre, saj se le-ta lahko bistveno razlikujejo od vasi do vasi.
+        To stran lahko uporabite kot referenčna pravila v primeru nesporazuma o specifikah, ali kot navodila igre. 
     </p>
   
     <div class="mt-8 space-y-6 max-w-lg">
-        <section>
-            <h2 class="text-2xl font-semibold">wani</h2>
-            <p class="text-gray-500">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat vehicula leo, at vestibulum arcu dictum at.
+        <app-collapsible-section [title]="'Predpostavke'">
+            <p>
+                Ker se pravila igre pogosto razlikujejo od igralca do igralca, bomo v tej strani uvedli nekaj (morda kontroverznih) predpostavk, katere bomo upoštevali v preostanku strani.
+                Če se z določenimi predpostavkami ne strinjate, jih lahko poljubno zamenjate, vendar v tem primeru ta stran ne more več služiti kot natančna reprezentacija igre.
             </p>
-        </section>
-  
-        <section>
-            <h2 class="text-2xl font-semibold">wana</h2>
-            <p class="text-gray-500">
-                Duis auctor felis non tortor tincidunt, eget commodo justo molestie. Vestibulum ante ipsum primis in faucibus.
-            </p>
-        </section>
-  
-        <section>
-            <h2 class="text-2xl font-semibold">wanis</h2>
-            <p class="text-gray-500">
-                aaa
-            </p>
-        </section>
 
-        <app-collapsible-section [title]="'wani wana wanis'">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat vehicula leo, at vestibulum arcu dictum at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat vehicula leo, at vestibulum arcu dictum at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat vehicula leo, at vestibulum arcu dictum at.</p>
+            <p style="margin: 20px 0px 5px 0px"><b>Predpostavke:</b></p>
+
+            <ul>
+                <li>As je <b>najvišja</b>(!) karta</li>
+                <li>Pijača mora vsebovati najmanj 3.8% alkohola (pivo), da je primerna za igro</li>
+                <li>V standardni 0.5L pločevinki piva je za cca. 20 požirkov</li>
+                <li>Nadaljne karte lahko igralci mečejo na mizo dokler se eden on določenih pivcev z pločevinko/kozarcem ne takne ustnic - do tega pridemo pozneje</li>
+            </ul>
         </app-collapsible-section>  
 
         <app-collapsible-section [title]="'wani wana wanis'">
