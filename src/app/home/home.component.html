@@ -26,7 +26,7 @@
             </ul>
         </app-collapsible-section>  
 
-        <app-collapsible-section [title]="'Začetek igre'">
+        <app-collapsible-section [title]="'Priprava igre'">
             <p>
                 Na začetku se poljubno število igralcev posede za mizo. Eden od igralcev postavi trikotnik (piramido) iz premešanega kupčka navadnih igralnih kart, katere so obrnjene z hrbtno stranjo navzgor, kot prikazuje spodnja slika:
             </p>
@@ -41,7 +41,37 @@
                     <code class="inline-code" style="padding: 3px">log<sub>2</sub>(n+1)+1=h</code>, kjer je n = št. kart, i = nivo (oz. "nadstropje") piramide in h = višina piramide. 
                 </p>
             </app-collapsible-subsection>
+            <p>
+                Po postavljeni piramidi delitelj nato razdeli karte tudi med igralce. Tako kot z višino same piramide, tudi tukaj predpostavimo, da vsak igralec dobi <code class="inline-code" style="padding: 3px">5</code> kart, vendar je
+                število kart smiselno prilagoditi številu igralcev.
+            </p>
         </app-collapsible-section> 
+
+        <app-collapsible-section [title]="'Začetek igre'">
+            <p>Ko je piramida enkrat postavljena in so karte razdeljene med igralce, se igra lahko prične. Delitelj kart začne postopoma odkrivati karte piramide od najnižjega nivoja naprej, od leve proti desni. Vizualizacija:</p>
+            <img src="../../karte_backside_most.png" alt="odprta prva karta" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
+            <p>
+                Ko delitelj odpre karto, začne odštevati od 5. Igralci lahko ustrezne karte na mizo odlagajo dokler delitelj ne odšteje do 0.
+            </p>
+            <h2>Katere karte so ustrezne?</h2>
+            <p>Pri tej igri je relevantna le številka karte. Npr: če je odkrita križeva 2 (kot na sliki), lahko nanjo položimo katerokoli karto s številko 2, ne glede na barvo/simbol. <b>POZOR:</b> Edina izjema je joker, katerega lahko položimo na katerokoli karto, vendar ga je zato smiselno varčevati za bližje koncu igre, iz razlogov do katerih še pridemo</p>
+            <p>
+                Če ni bilo odložene nobene karte, ko delitelj prešteje do 0, enostavno nadaljujemo z naslednjo karto. V primeru, da so bile karte odložene pa igralec, ki je <b>ZADNJI</b> odložil karto razdeli požirke med preostale igralce, po pravilih katere bomo razložili v naslednjem poglavju.
+                <b>POMEMBNO:</b> Ko prvi igralec položi karto, lahko delitelj preneha odštevati. Od te točke naprej lahko preostali igralci še vedno polagajo karte na kup, dokler se eden od igralcev, kateremu je bilo dodeljeno pitje, ne takne ustnic z pločevinko/kozarcem (tudi če je preminulo že >5 sekund).
+            </p>
+            <app-collapsible-subsection [title]="'Primer za lažjo predstavo'">
+                <p>
+                    Predpostavimo, da imamo <code class="inline-code" style="padding: 3px">5</code> igralcev: <code class="inline-code" style="padding: 3px">A</code>, <code class="inline-code" style="padding: 3px">B</code>, <code class="inline-code" style="padding: 3px">C</code>, <code class="inline-code" style="padding: 3px">D</code> in <code class="inline-code" style="padding: 3px">E</code>.
+                    
+
+                </p>
+
+            </app-collapsible-subsection>
+        </app-collapsible-section>
+
+        <app-collapsible-section [title]="'Računanje požirkov'">
+
+        </app-collapsible-section>
 
     </div>
 </div>
