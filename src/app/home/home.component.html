@@ -61,16 +61,28 @@
             </p>
             <app-collapsible-subsection [title]="'Primer za lažjo predstavo'">
                 <p>
-                    Predpostavimo, da imamo <code class="inline-code" style="padding: 3px">5</code> igralcev: <code class="inline-code" style="padding: 3px">A</code>, <code class="inline-code" style="padding: 3px">B</code>, <code class="inline-code" style="padding: 3px">C</code>, <code class="inline-code" style="padding: 3px">D</code> in <code class="inline-code" style="padding: 3px">E</code>.
-                    
-
+                    Predpostavimo, da imamo <code class="inline-code" style="padding: 3px">4</code> igralce: <code class="inline-code" style="padding: 3px">A</code>, <code class="inline-code" style="padding: 3px">B</code>, <code class="inline-code" style="padding: 3px">C</code> in <code class="inline-code" style="padding: 3px">D</code>.
+                    Delitelj (A) najprej odpre prvo karto, in začne odštevati od 5.
+                    <img src="../../karte_backside_most.png" alt="odprta prva karta" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
+                    Igralec B nato odloži srčevo 2, zaradi česar delitelj preneha z odštevanjem. 
+                    <img src="../../karte_first.png" alt="odprta prva karta" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
+                    Ker je igralec B odložil zadnjo (in edino) karto, lahko dodeli 1 požirek enemu od igralcev (razloženo v LINK). Recimo, da igralec B požirek dodeli igralcu C. <!-- dadej link da tega chapterja -->
+                    Igralec C vzdigne kozarec, da bi naredil požirek, vendar preden se z kozarcem takne ustnic, igralec D odloži novo karto: pikovo 2.
+                    <img src="../../karte_second.png" alt="položena druga karta" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
+                    Kljub temu, da je pred kratkim igralec B naročil požirek igralcu C, se ta ukaz nemudoma prekine, in igralcu C ni treba narediti požirka (razen če mu ga igralec D ponovno dodeli). Sedaj ima igralec D (ki je odložil zadnjo karto), na voljo 2 požirka za dodelitev.
+                    Odloči se dodelitvi enega požirka igralcu B, in enega igralcu A (lahko bi tudi oba dodelil le enemu igralcu). Ko se katerikoli od izbranih igralcev z pločevinko/kozarcem dotakne ustnic, nihče ne more več dodajati kart na trenutno karto. Trenutna "runda" je zaključena.
                 </p>
 
             </app-collapsible-subsection>
         </app-collapsible-section>
 
         <app-collapsible-section [title]="'Računanje požirkov'">
+            Število požirkov, ki jih ima za dodeljevanje na voljo igralec, ki je zadnji položil karto, je odvisna od števila kart ter trenutnim nivojem piramide.
+            Formula za izračun: <code class="inline-code" style="padding: 3px">p=k*i</code>, kjer je p = števio požirkov, k = številu kart na kupu (brez originalne) ter i = trenutni nivo piramide.
+            Edina izjema je, zadnji nivo, kjer je faktor množenja = <code class="inline-code" style="padding: 3px">10</code>!
+            <app-collapsible-subsection [title]="'Primer'">
 
+            </app-collapsible-subsection>
         </app-collapsible-section>
 
     </div>
