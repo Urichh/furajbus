@@ -18,3 +18,7 @@
 .inline-code {
     @apply font-mono text-sm bg-gray-400/50 text-black px-1.5 py-0.5 rounded-md overflow-x-auto;
 }
+
+.extra {
+    @apply text-sm;
+}
