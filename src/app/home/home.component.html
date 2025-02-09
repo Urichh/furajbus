@@ -8,7 +8,7 @@
         na različne faktorje.<br /><br /> Cilj te spletne strani je standardizacija in specifikacija pravil igre, saj se le-ta lahko bistveno razlikujejo od vasi do vasi.
         To stran lahko uporabite kot referenčna pravila v primeru nesporazuma o specifikah, ali kot navodila igre. 
     </p>
-  
+    <!-- zamejnej "delitelj" za "busmaster" -->
     <div class="mt-8 space-y-6 max-w-lg">
         <app-collapsible-section [title]="'Predpostavke'">
             <p>
@@ -34,6 +34,9 @@
             <p>
                 V navodilih predpostavljamo, da bo piramida visoka 5 kart, vendar je višina poljubna. V primeru večjega števila igralcev, je višino piramide smiselno povečati.
             </p>
+            <p>
+                Po postavljeni piramidi delitelj nato razdeli karte tudi med igralce. Število kart, ki jih dobi vsak igralec je enako višini piramide (pri standardni piramidi višine 5 torej vsi igralci dobijo 5 kart)
+            </p>
             <app-collapsible-subsection [title]="'Zanimivost'">
                 <p class="extra">
                     Število kart na vsakem nivoju je lahko definiramo z: <code class="inline-code" style="padding: 3px">n<sub>i</sub>=h-i+1</code>,
@@ -41,10 +44,6 @@
                     <code class="inline-code" style="padding: 3px">log<sub>2</sub>(n+1)+1=h</code>, kjer je n = št. kart, i = nivo (oz. "nadstropje") piramide in h = višina piramide. 
                 </p>
             </app-collapsible-subsection>
-            <p>
-                Po postavljeni piramidi delitelj nato razdeli karte tudi med igralce. Tako kot z višino same piramide, tudi tukaj predpostavimo, da vsak igralec dobi <code class="inline-code" style="padding: 3px">5</code> kart, vendar je
-                število kart smiselno prilagoditi številu igralcev.
-            </p>
         </app-collapsible-section> 
 
         <app-collapsible-section [title]="'Začetek igre'">
@@ -58,7 +57,17 @@
             <p>
                 Če ni bilo odložene nobene karte, ko delitelj prešteje do 0, enostavno nadaljujemo z naslednjo karto. V primeru, da so bile karte odložene pa igralec, ki je <b>ZADNJI</b> odložil karto razdeli požirke med preostale igralce, po pravilih katere bomo razložili v naslednjem poglavju.
                 <b>POMEMBNO:</b> Ko prvi igralec položi karto, lahko delitelj preneha odštevati. Od te točke naprej lahko preostali igralci še vedno polagajo karte na kup, dokler se eden od igralcev, kateremu je bilo dodeljeno pitje, ne takne ustnic z pločevinko/kozarcem (tudi če je preminulo že >5 sekund).
+                V naslednjih primerih:
             </p>
+
+            <ul>
+                <li>Igralčeva karta se dotakne mize, ko je delitelj že odštel do 0</li>
+                <li>Igralec položi karto, ko je igralec, kateremu so bili dodeljeni požirkim že naredil požirek</li>
+                <li>Igralec položi neustrezno karto</li>
+            </ul>
+
+            <p>Pa mora igralec, ki je storil napako, za kazen spiti vse požirke, katerih so preostali igralci oproščeni.</p>
+
             <app-collapsible-subsection [title]="'Primer za lažjo predstavo'">
                 <p>
                     Predpostavimo, da imamo <code class="inline-code" style="padding: 3px">4</code> igralce: <code class="inline-code" style="padding: 3px">A</code>, <code class="inline-code" style="padding: 3px">B</code>, <code class="inline-code" style="padding: 3px">C</code> in <code class="inline-code" style="padding: 3px">D</code>.
@@ -77,12 +86,54 @@
         </app-collapsible-section>
 
         <app-collapsible-section [title]="'Računanje požirkov'">
-            Število požirkov, ki jih ima za dodeljevanje na voljo igralec, ki je zadnji položil karto, je odvisna od števila kart ter trenutnim nivojem piramide.
-            Formula za izračun: <code class="inline-code" style="padding: 3px">p=k*i</code>, kjer je p = števio požirkov, k = številu kart na kupu (brez originalne) ter i = trenutni nivo piramide.
-            Edina izjema je, zadnji nivo, kjer je faktor množenja = <code class="inline-code" style="padding: 3px">10</code>!
+            <p>
+                Število požirkov, ki jih ima za dodeljevanje na voljo igralec, ki je zadnji položil karto, je odvisna od števila kart ter trenutnim nivojem piramide.
+                Formula za izračun: <code class="inline-code" style="padding: 3px">p=k*i</code>, kjer je p = števio požirkov, k = številu kart na kupu (brez originalne) ter i = trenutni nivo piramide.
+                Edina izjema je, zadnji nivo, kjer je faktor množenja = <code class="inline-code" style="padding: 3px">2*h</code>, kjer je h = višina piramide! Npr. pri standardni igri, z piramido višine 5, je ta faktor 10.
+             </p>
             <app-collapsible-subsection [title]="'Primer'">
-
+                <img src="../../karte_3.png" alt="primer izračuna požirkov" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
+                <img src="../../karte_4.png" alt="primer izračuna požirkov" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
+                <img src="../../karte_5.png" alt="primer izračuna požirkov" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
             </app-collapsible-subsection>
+            <p>
+                Igralec, kateremu je bilo dodeljeno število požirkov, ki je večje od 10, se lahko odloči, da skupine po 10 požirkov zamenja za shote 0.03L žgane pijače (40% alk.). Npr. 20 požirkov lahko zamenja za 2 shota.
+            </p>
+        </app-collapsible-section>
+
+        <app-collapsible-section [title]="'Zaključek igre'">
+            <p>
+                Ko delitelj odkrije zadnjo karto v vrhu piramide, in so požirki med igralce dokončno porazdeljeni, je naslednji korak določitev igralca, ki gre na "avtobus". Igralec, ki gre na avtobus je tisti, ki ima na koncu igre največ kart. V primeru,
+                da na tak način igralca ni mogoče določiti, saj ima več igralcev isto število kart, mora delitelj premešati kupček kart, in vsak od igralcev z največjim številom kart naključno vleče karto, brez da bi jo pogledal. Igralec, ki povleče <b>najnižjo</b> karto,
+                nato nadaljuje naprej na avtobus. V primeru, da več igralcev povleče isto najnižjo karto, ponovno premešajte kupček in tej igralci ponovno vlečejo karto. Proces ponavljajte, dokler le eden od igralcev nima unikatne najnižje karte.
+            </p>
+        </app-collapsible-section>
+
+        <app-collapsible-section [title]="'Avtobus'">
+           <p>Ko je določen igralec, ki gre na avtobus, busmaster ponovno zmeša kupček kart, in jih <code class="inline-code" style="padding: 3px">5</code> odkritih postavi v horizontalno vrsto, kot prikazuje spodnja slika.</p>
+           <img src="../../bus_init.png" alt="začetna postavitev avtobusa" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
+           <p>
+                Igralec začne na skrajno levi karti, in se premika proti desni. Pri vsaki karti busmaster igralca vpraša, če meni da bo karta, katero bo na slepo vlekel iz vrha kupa, višja ali nižja od trenutne karte.
+                Če igralec ugane pravilno, nadaljuje naprej na naslednjo karto, kjer ponovno ugiba. Če pa se igralec zmoti, pa ponovno začne na prvi karti na skrajno levi, in spije število požirkov, 
+                ki je enako "globini" avtobusa (v prvi rundi, ko je na mizi 5 kart, je to globina 1) zmnoženi s zaporednim številom kart, na katerim se je zmotil (praktični primer v LINK). Če se igralec vrne na začetek se od tam naprej upošteva 
+                zadnja karta na vrhu "kupa", in ne ponovno originalna karta. V primeru, da je izvlečena karta istega števila kot karta pod njo, se lahko igralec ponovno odloči za višje/nižje, medtem ko busmaster povleče naslednjo karto.
+                Tako kot pri prejšnji fazi igre, tukaj velja, da je <code class="inline-code" style="padding: 3px">2</code> najnižja karta, <code class="inline-code" style="padding: 3px">joker</code> pa najvišja.
+           </p>
+           <p>
+                Ko igralec uspešno prispe do konca vrste in pravilno ugane peto karto, busmaster ponovno postavi avtobus, le da tokrat z eno kart manj. Ta proces ponavljajte, dokler na mizi ni le ena karta, in jo igralec pravilno ugane.
+                Tako kot pri piramidi, je tudi na avtobusu število požirkov odvisno od globine avtobusa:
+           </p>
+           <ul>
+                <li>1. nivo (5 kart) - faktor x1</li>
+                <li>2. nivo (4 karte) - faktor x2</li>
+                <li>...</li>
+           </ul>
+            <p>Tako kot pri piramidi višine 5, je tudi na avtobusu faktor množitve pri zadnji globini (kjer je 5. nivo oz. 1 karta) enak x10. Igralec lahko tudi na avtobusu skupine po 10 požirkov zamenja za shot</p>
+
+           <app-collapsible-subsection [title]="'Primer'">
+                
+           </app-collapsible-subsection>
+
         </app-collapsible-section>
 
     </div>
