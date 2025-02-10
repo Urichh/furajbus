@@ -38,13 +38,6 @@
             <p>
                 Po postavljeni piramidi busmaster nato razdeli karte igralcem. Število kart, ki jih dobi vsak igralec je enako višini piramide (pri standardni piramidi višine <code>5</code> torej vsi igralci dobijo <code>5</code> kart)
             </p>
-            <app-collapsible-subsection [title]="'Zanimivost'">
-                <p class="extra">
-                    Število kart na vsakem nivoju je lahko definiramo z: <code>n<sub>i</sub>=h-i+1</code>,
-                    število vseh kart: <code>n=2<sup>h</sup>-1</code> in višina piramide: 
-                    <code>h=log<sub>2</sub>(n+1)+1=h</code>, kjer je n = št. kart, i = nivo (oz. "nadstropje") piramide in h = višina piramide. 
-                </p>
-            </app-collapsible-subsection>
         </app-collapsible-section> 
 
         <app-collapsible-section [title]="'Začetek igre'">
@@ -169,7 +162,44 @@
         </app-collapsible-section>
 
         <app-collapsible-section [title]="'Strategije & zanimivosti'">
-            <p>V tem poglavju bomo za konec predstavili še nekaj zanimivosti in nasvetov za optimizacijo igre.</p>
+            <p>
+                Najprej predstavimo nekaj osnovnih lastnosti piramide, ki nam bodo pomagale kasneje.
+            </p>
+            <p>
+                Število kart na vsakem nivoju piramide lahko definiramo z: <code>n<sub>i</sub>=h-i+1</code>,
+                število vseh kart: <code>n=2<sup>h</sup>-1</code> in višina piramide: 
+                <code>h=log<sub>2</sub>(n+1)+1=h</code>, kjer je n = št. kart, i = nivo (oz. "nadstropje") piramide in h = višina piramide. 
+            </p>
+            <h2>Se karto splača položiti takoj, ali je bolje počakati?</h2>
+            <p>
+                Predpostavimo, da igramo s standardnim kupčkom kart, v katerem je 54 kart (4 vsakega števila + 2 jokerja), in da je piramida višine 5 (skupno 15 kart v piramidi). Vsak igralec dobi 5 kart.
+                Zanima nas, če je bolje karto nemudoma položiti, ko vidimo ujemanje, ali je bolje počakati in upati, da se karta ponovno pojavi na višjem nivoju, kjer je faktor množitve večji.
+            </p>
+            <p>
+                Recimo, da se odpre prva karta prve vrste, in ta karta je as. Mi imamo le en as v roki, in nas zanima ali ga je bolje v tej rundi položiti, ali počakati če se ponovno pojavi kasneje.
+            </p>
+            <p>
+                Najprej izračunamo število neznanih kart. Vseh kart v kupčku je 54, od tega jih je 15 v piramidi, in ena od njih je že odkrita. Poleg tega poznamo še 4 ostale karte, saj so v naši roki, in vemo da zagotovo niso as.
+                Torej, lahko izračunamo št. neznanih kart: <code>N<sub>neznanih</sub>=54-(15+1+4)=34</code>
+            </p>
+            <p>
+                Ker nas zanima, ali se bo as ponovno pojavil v višjem nivoju, kjer bo št. požirkov nato večje, želimo izračunati možnost, da se vsaj eden od preostalih dveh asov pojavi v drugem, tretjem, četrtem ali petem nivoju piramide. 
+                Verjetnost, da se as <b>ne</b> pojavi v teh nivojih piramide, lahko izračunamo s pomočjo hipergeometrijske porazdelitve, in jo nato negiramo, da dobimo verjetnost vsaj ene pojavitve asa. 
+                Vemo, da sta v kupčku kart še 2 asa in 32 ne-asov. Prav tako vemo, da je število neodkritih kart na nivojih 2-5: <code>∑n<sub>i</sub>=10</code><!-- dadej limite sumacij -->
+            </p>
+            <p>
+                Te vrednosti vstavimo v hipergeometrijsko formulo, in vidimo, da je verjetnost, da se v 10ih kartah ki so na nivojih 2-5 pojavi vsaj en as: <code>P<sub>as</sub>= 1 - (32 10) / (34 10) = 0.508</code> oz. 50.8%
+            </p>
+            <p>
+                Nato nas zanima pričakovana vrednost požirkov, ki nam jih bo as prinesel, če z njim počakamo na 2. ali kasnejši nivo. Pričakovano vrednost lahko izračunamo:
+                <code>EV<sub></sub>=P<sub>nivo2</sub>*2+P<sub>nivo3</sub>*3+P<sub>nivo4</sub>*4+P<sub>nivo5</sub>*10 = 1.778</code>, kjer je EV - expected value (pričakovana vrednost), P<sub>i</sub> pa verjetnost, da se as pojavi na nivoji i.
+            </p>
+            <p>
+                Tako smo izračunali, da če z asom počakamo na kasnejše nivoje, je pričakovan izkoristek asa v povprečju 1.778krat večji od tistega enega požirka, ki bi ga dobili na voljo, če bi as položili takoj v prvem nivoju. 
+                Ta kalkulacija seveda predpostavlja, da so vsi igralci v igri striktno racionalni, in se bodo držali istih načel, kar pa seveda verjetno ni res. Če nek drug igralec položi asa v prvi vrsti, se verjetnost ponovne pojavitve asa 
+                drastično zmanjša, prav tako pa bi bilo pogosto bolj smiselno položiti asa v nižjih nivojih, če je že več igralcev položilo svojega na trenutni karti, saj lahko tako kvantiteta kart na kupu preseže doprinos večjega faktorja množitve na višjih nivojih. 
+                Prav tako ta izračun ne upošteva možnosti, da če karto zadržiš za kasneje, in se ta ne pojavi več, se tvoja možnost igranja avtobusa poveča. 
+            </p>
         </app-collapsible-section>
 
     </div>
