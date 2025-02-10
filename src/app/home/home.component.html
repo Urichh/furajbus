@@ -131,9 +131,42 @@
             <p>Tako kot pri piramidi višine 5, je tudi na avtobusu faktor množitve pri zadnji globini (kjer je 5. nivo oz. 1 karta) enak x10. Igralec lahko tudi na avtobusu skupine po 10 požirkov zamenja za shot</p>
 
            <app-collapsible-subsection [title]="'Primer'">
-                
+                <p>Busmaster najprej postavi avtobus z <code class="inline-code" style="padding: 3px">5</code> kartami in igralec začne na skrajno levi karti (označeno z puščico).</p>
+                <img src="../../bus_init.png" alt="začetna postavitev avtobusa" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
+                <p>
+                    Igralec na prvi karti (as) reče, da bo karta, ki jo bo izvelekel busmaster nižja od trenutne karte. Izkaže se, da je bila karta "junc", zato nadaljuje na naslednjo karto, kjer igralec predvideva, da bo višja.
+                    Izvlečena karta je 9, in ker je višja od 2, prav tako nadaljuje na naslednjo karto. Pri naslednji karti igralec ponovno pravilno ugane višje, in nadaljuje na kraljico. Na kraljici igralec ugane nižje, vendar je karta kralj.
+                    Posledično, se igralec vrne nazaj na prvo karto in spije 4 požirke.
+                </p>
+                <img src="../../bus_zajeb_1.png" alt="napaka1" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
+                <p>
+                    Ko se igralec vrne na prvo karto, se za primerjave začne uporabljati karto na vrhu. Igralec ugane nižje, in ker je 4 nižje od junca, nadaljuje na naslednjo karto. Igralec ugane nižje, vendar ker je 10 višja op 9, igralec spije 2 
+                    požirka in se vrne na prvo karto.
+                </p>
+                <img src="../../bus_zajeb_2.png" alt="napak2" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
+                <p>
+                    Igralec pri prvi karti (4) ugane višje, uspešno se premakne na naslednjo karto. Od tam naprej pravilno predvideva vse karte, vključno z zadnjo (kralj višji od 5).
+                </p>
+                <img src="../../bus_zmaga.png" alt="zmaga" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
+                <p>
+                    Busmaster karte pospravi, in pripravi naslednji krog, kjer so le 4 karte, vendar je faktor množitve sedaj <code class="inline-code" style="padding: 3px">x2</code>.
+                </p>
+                <img src="../../bus_whatever.png" alt="začetna postavitev avtobusa - runda 2" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
+                <p>
+                    Pri prvi karti igralec ugane višje, in ker je 5 višje od 2, se premakne na naslednjo karto. Igralec ponovno ugane višje, 10 je višje od 5, spet se premakne naprej. Pri kralju igralec ugane višje, vendar ker je izvlečen as, se igralec 
+                    vrne na prvo karto (sedaj bo to 5), in spije 6 požirkov.
+                </p>
+                <img src="../../bus_whatever_2.png" alt="začetna postavitev avtobusa - runda 2" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
+                <p>
+                    Igra se tako nadaljuje naprej. V naslednjem krogu so postavljene le 3 karte, vendar je faktor množenja <code class="inline-code" style="padding: 3px">x3</code> itd. Tako kot pri piramidi, je tudi pri avtobusu na koncu, ko je v vrsti le ena karta,
+                    faktor množenja <code class="inline-code" style="padding: 3px">x10</code>
+                </p>
            </app-collapsible-subsection>
 
+        </app-collapsible-section>
+
+        <app-collapsible-section [title]="'Strategije & zanimivosti'">
+            <p>V tem poglavju bomo za konec predstavili še nekaj zanimivosti in nasvetov za optimizacijo igre.</p>
         </app-collapsible-section>
 
     </div>
