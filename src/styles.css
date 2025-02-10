@@ -22,3 +22,7 @@
 .extra {
     @apply text-sm;
 }
+
+code {
+    @apply font-mono text-sm bg-gray-400/50 text-black p-[3px] rounded-lg overflow-x-auto;
+}
