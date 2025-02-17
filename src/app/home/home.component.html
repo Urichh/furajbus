@@ -188,11 +188,12 @@
                 Vemo, da sta v kupčku kart še 2 asa in 32 ne-asov. Prav tako vemo, da je število neodkritih kart na nivojih 2-5: <code>∑n<sub>i</sub>=10</code><!-- dadej limite sumacij -->
             </p>
             <p>
-                Te vrednosti vstavimo v hipergeometrijsko formulo, in vidimo, da je verjetnost, da se v 10ih kartah ki so na nivojih 2-5 pojavi vsaj en as: <code>P<sub>as</sub>= 1 - (32 10) / (34 10) = 0.508</code> oz. 50.8%
-            </p>
+                Te vrednosti vstavimo v hipergeometrijsko formulo, in vidimo, da je verjetnost, da se v 10ih kartah ki so na nivojih 2-5 pojavi vsaj en as: 
+            </p> 
+            <div appMathjax="$$ P_{as} = 1 - \frac{\binom{32}{10}}{\binom{34}{10}} = 0.508 $$"></div>
             <p>
                 Nato nas zanima pričakovana vrednost požirkov, ki nam jih bo as prinesel, če z njim počakamo na 2. ali kasnejši nivo. Pričakovano vrednost lahko izračunamo:
-                <code>EV<sub></sub>=P<sub>nivo2</sub>*2+P<sub>nivo3</sub>*3+P<sub>nivo4</sub>*4+P<sub>nivo5</sub>*10 = 1.778</code>, kjer je EV - expected value (pričakovana vrednost), P<sub>i</sub> pa verjetnost, da se as pojavi na nivoji i.
+                <code>EV<sub></sub>=P<sub>nivo2</sub>*2+P<sub>nivo3</sub>*3+P<sub>nivo4</sub>*4+P<sub>nivo5</sub>*10 = 1.778</code>, kjer je EV - expected value (pričakovana vrednost), P<sub>i</sub> pa verjetnost, da se as pojavi na nivoju i.
             </p>
             <p>
                 Tako smo izračunali, da če z asom počakamo na kasnejše nivoje, je pričakovan izkoristek asa v povprečju 1.778krat večji od tistega enega požirka, ki bi ga dobili na voljo, če bi as položili takoj v prvem nivoju. 
