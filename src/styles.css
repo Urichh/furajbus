@@ -9,6 +9,9 @@
     height: auto;
     display: block;
 }*/
+html {
+    scroll-behavior: smooth;
+}
 
 #bg {
     background-color: #87c28265;

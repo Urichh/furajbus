@@ -2,3 +2,25 @@ ul {
     list-style-type: disc;
     padding-left: 30px;
 }
+
+#kazalo {
+    /*list-style-type: decimal;*/
+    position: relative;
+}
+
+.indented {
+    margin-left: 30px;
+    position: relative;
+}
+
+.indented::before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    top: 30%;
+    width: 20px;
+    height: 15px;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: translateY(-50%);
+}
