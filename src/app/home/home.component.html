@@ -193,7 +193,10 @@
             <div appMathjax="$$ P_{as} = 1 - \frac{\binom{32}{10}}{\binom{34}{10}} = 0.508 $$"></div>
             <p>
                 Nato nas zanima pričakovana vrednost požirkov, ki nam jih bo as prinesel, če z njim počakamo na 2. ali kasnejši nivo. Pričakovano vrednost lahko izračunamo:
-                <code>EV<sub></sub>=P<sub>nivo2</sub>*2+P<sub>nivo3</sub>*3+P<sub>nivo4</sub>*4+P<sub>nivo5</sub>*10 = 1.778</code>, kjer je EV - expected value (pričakovana vrednost), P<sub>i</sub> pa verjetnost, da se as pojavi na nivoju i.
+            </p>
+            <div appMathjax="$$ EV = \sum_{n=2}^{4} P_{nivo_n} \cdot w_n + P_{nivo_{5}} \cdot 10 $$"></div>
+            <p>
+                Kjer je <code>EV</code> - expected value (pričakovana vrednost), <code>P<sub>nivo</sub></code> pa verjetnost, da se as pojavi na nivoju <code>n</code>.
             </p>
             <p>
                 Tako smo izračunali, da če z asom počakamo na kasnejše nivoje, je pričakovan izkoristek asa v povprečju 1.778krat večji od tistega enega požirka, ki bi ga dobili na voljo, če bi as položili takoj v prvem nivoju. 
