@@ -9,7 +9,6 @@
     align-items: center;
     padding: 0px 0px 0px 30px;
     cursor: pointer;
-    
 }
   
 span {
@@ -28,5 +27,5 @@ span {
 }
 
 .expanded {
-    max-height: 1000px;
+    max-height: 250vh; /* ?? */
 }

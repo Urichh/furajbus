@@ -15,7 +15,7 @@
                 <li>2. <a href="#priprava" class="text-black-500 underline hover:text-gray-500">Priprava igre</a></li>
                 <li>3. <a href="#zacetek" class="text-black-500 underline hover:text-gray-500">Začetek igre</a></li>
                 <li class="indented">3.1 <a href="#primer1" class="text-black-500 underline hover:text-gray-500">Primer</a></li>
-                <li>4. R<a href="#racunanje" class="text-black-500 underline hover:text-gray-500">ačunanje požirkov</a></li>
+                <li>4. <a href="#racunanje" class="text-black-500 underline hover:text-gray-500">Računanje požirkov</a></li>
                 <li>5. <a href="#zakljucek" class="text-black-500 underline hover:text-gray-500">Zaključek igre</a></li>
                 <li>6. <a href="#avtobus" class="text-black-500 underline hover:text-gray-500">Avtobus</a></li>
                 <li class="indented">6.1 <a href="#primer2" class="text-black-500 underline hover:text-gray-500">Primer</a></li>
@@ -44,7 +44,7 @@
                 Na začetku se poljubno število igralcev posede za mizo. Skupaj določijo enega igralca, ki bo "busmaster". Ta igralec še vedno lahko igra igro, vendar je poleg tega zadolžen še za ostale stvari, ki so predstavljene na tej strani.
                 Busmaster postavi trikotnik (piramido) iz premešanega kupčka navadnih igralnih kart, katere so obrnjene z hrbtno stranjo navzgor, kot prikazuje spodnja slika:
             </p>
-            <img src="../../karte_backside_full.png" alt="zakrite karte" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" /> <!-- fix scaling-->
+            <img src="../../karte_backside_full.png" alt="zakrite karte" class="" />
             <p>
                 V navodilih predpostavljamo, da bo piramida visoka <code>5</code> kart, vendar je višina poljubna. V primeru večjega števila igralcev, je višino piramide smiselno povečati.
             </p>
@@ -55,7 +55,7 @@
 
         <app-collapsible-section [title]="'Začetek igre'" id="zacetek">
             <p>Ko je piramida enkrat postavljena in so karte razdeljene med igralce, se igra lahko prične. Busmaster začne postopoma odkrivati karte piramide od najnižjega nivoja naprej, od leve proti desni. Vizualizacija:</p>
-            <img src="../../karte_backside_most.png" alt="odprta prva karta" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
+            <img src="../../karte_backside_most.png" alt="odprta prva karta" class="" />
             <p>Ko busmaster odpre karto, začne odštevati od 5. Igralci lahko ustrezne karte na mizo odlagajo dokler busmaster ne odšteje do 0.</p>
             <h2>Katere karte so ustrezne?</h2>
             <p>Pri tej igri je relevantna le številka karte. Npr: če je odkrita križeva 2 (kot na sliki), lahko nanjo položimo katerokoli karto s številko 2, ne glede na barvo/simbol. <b>POZOR:</b> Edina izjema je joker, katerega lahko položimo na katerokoli karto, vendar ga je zato smiselno varčevati za bližje koncu igre, iz razlogov do katerih še pridemo</p>
@@ -77,16 +77,15 @@
                 <p>
                     Predpostavimo, da imamo <code>4</code> igralce: <code>A</code>, <code>B</code>, <code>C</code> in <code>D</code>.
                     Busmaster (<code>A</code>) najprej odpre prvo karto, in začne odštevati od 5.
-                    <img src="../../karte_backside_most.png" alt="odprta prva karta" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
+                    <img src="../../karte_backside_most.png" alt="odprta prva karta" class="" />
                     Igralec <code>B</code> nato odloži srčevo 2, zaradi česar busmaster preneha z odštevanjem. 
-                    <img src="../../karte_first.png" alt="odprta prva karta" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
-                    Ker je igralec <code>B</code> odložil zadnjo (in edino) karto, lahko dodeli 1 požirek enemu od igralcev (razloženo v LINK). Recimo, da igralec <code>B</code> požirek dodeli igralcu <code>C</code>. <!-- dadej link da tega chapterja -->
+                    <img src="../../karte_first.png" alt="odprta prva karta" class="" />
+                    Ker je igralec <code>B</code> odložil zadnjo (in edino) karto, lahko dodeli 1 požirek enemu od igralcev (razloženo v poglavju <a href="#racunanje" class="text-black-500 underline hover:text-gray-500">računanje požirkov</a>). Recimo, da igralec <code>B</code> požirek dodeli igralcu <code>C</code>.
                     Igralec <code>C</code> vzdigne kozarec, da bi naredil požirek, vendar preden se z kozarcem takne ustnic, igralec <code>C</code> odloži novo karto: pikovo 2.
-                    <img src="../../karte_second.png" alt="položena druga karta" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
+                    <img src="../../karte_second.png" alt="položena druga karta" class="" />
                     Kljub temu, da je pred kratkim igralec <code>B</code> naročil požirek igralcu <code>C</code>, se ta ukaz nemudoma razveljavi, in igralcu <code>C</code> ni treba narediti požirka (razen če mu ga igralec <code>D</code> ponovno dodeli). Sedaj ima igralec <code>D</code> (ki je odložil zadnjo karto), na voljo 2 požirka za dodelitev.
                     Odloči se dodelitvi enega požirka igralcu <code>B</code>, in enega igralcu <code>A</code> (lahko bi tudi oba dodelil le enemu igralcu). Ko se katerikoli od izbranih igralcev z pločevinko/kozarcem dotakne ustnic, nihče ne more več dodajati kart na trenutno karto. Trenutna "runda" je zaključena, in nadaljuje se na naslednjo karto.
                 </p>
-
             </app-collapsible-subsection>
         </app-collapsible-section>
 
@@ -101,9 +100,9 @@
                 Pomembno je samo to, da je seštevek požirkov enak izračunanem številu.
              </p>
             <app-collapsible-subsection [title]="'Primer'">
-                <img src="../../karte_3.png" alt="primer izračuna požirkov" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
-                <img src="../../karte_4.png" alt="primer izračuna požirkov" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
-                <img src="../../karte_5.png" alt="primer izračuna požirkov" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
+                <img src="../../karte_3.png" alt="primer izračuna požirkov" class="" style="margin-bottom: 25px" />
+                <img src="../../karte_4.png" alt="primer izračuna požirkov" class="" style="margin-bottom: 25px" />
+                <img src="../../karte_5.png" alt="primer izračuna požirkov" class="" style="margin-bottom: 25px" />
             </app-collapsible-subsection>
             <p>
                 Igralec, kateremu je bilo dodeljeno število požirkov, ki je večje od 10, se lahko odloči, da skupine po 10 požirkov zamenja za shote 0.03L žgane pijače (40% alk.). Npr. 20 požirkov lahko zamenja za 2 shota.
@@ -120,7 +119,7 @@
 
         <app-collapsible-section [title]="'Avtobus'" id="avtobus">
            <p>Ko je enkrat določen igralec, ki gre na avtobus, busmaster ponovno zmeša kupček kart, in jih <code>5</code> odkritih postavi v horizontalno vrsto, kot prikazuje spodnja slika.</p>
-           <img src="../../bus_init.png" alt="začetna postavitev avtobusa" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
+           <img src="../../bus_init.png" alt="začetna postavitev avtobusa" class="min-w-[150%] min-h-[150%] object-cover m-[-25%]" />
            <p>
                 Igralec začne na skrajno levi karti, in se premika proti desni. Pri vsaki karti busmaster igralca vpraša, če meni da bo karta, katero bo na slepo vlekel iz vrha kupa, višja ali nižja od trenutne karte.
                 Če igralec ugane pravilno, nadaljuje naprej na naslednjo karto, kjer ponovno ugiba. Če pa se igralec zmoti, pa ponovno začne na prvi karti na skrajno levi, in spije število požirkov, 
@@ -141,31 +140,31 @@
 
            <app-collapsible-subsection [title]="'Primer'" id="primer2">
                 <p>Busmaster najprej postavi avtobus z <code>5</code> kartami in igralec začne na skrajno levi karti (označeno z puščico).</p>
-                <img src="../../bus_init.png" alt="začetna postavitev avtobusa" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
+                <img src="../../bus_init.png" alt="začetna postavitev avtobusa" class="min-w-[150%] min-h-[150%] object-cover m-[-25%]" />
                 <p>
                     Igralec na prvi karti (as) reče, da bo karta, ki jo bo izvelekel busmaster nižja od trenutne karte. Izkaže se, da je bila karta "junc", zato nadaljuje na naslednjo karto, kjer igralec predvideva, da bo višja.
                     Izvlečena karta je 9, in ker je višja od 2, prav tako nadaljuje na naslednjo karto. Nato igralec ponovno pravilno ugane višje, in nadaljuje na kraljico. Na kraljici igralec ugane nižje, vendar je položena karta kralj.
                     Posledično, se igralec vrne nazaj na prvo karto in spije 4 požirke.
                 </p>
-                <img src="../../bus_zajeb_1.png" alt="napaka1" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
+                <img src="../../bus_zajeb_1.png" alt="napaka1" class="min-w-[150%] min-h-[150%] object-cover m-[-25%]" />
                 <p>
                     Ko se igralec vrne na prvo karto, se za primerjave začne uporabljati karto na vrhu. Igralec ugane nižje, in ker je 4 nižje od junca, nadaljuje na naslednjo karto. Igralec ugane nižje, vendar ker je 10 višja od 9, igralec spije 2 
                     požirka in se vrne na prvo karto.
                 </p>
-                <img src="../../bus_zajeb_2.png" alt="napak2" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
+                <img src="../../bus_zajeb_2.png" alt="napak2" class="min-w-[150%] min-h-[150%] object-cover m-[-25%]" />
                 <p>
                     Igralec pri prvi karti (4) ugane višje, in se posledično premakne na naslednjo karto. Od tam naprej pravilno predvideva vse karte, vključno z zadnjo (kralj višji od 5).
                 </p>
-                <img src="../../bus_zmaga.png" alt="zmaga" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
+                <img src="../../bus_zmaga.png" alt="zmaga" class="min-w-[150%] min-h-[150%] object-cover m-[-25%]" />
                 <p>
                     Busmaster karte pospravi, premeša in pripravi naslednji krog, kjer so le 4 karte, vendar je faktor množitve sedaj <code>x2</code>.
                 </p>
-                <img src="../../bus_whatever.png" alt="začetna postavitev avtobusa - runda 2" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
+                <img src="../../bus_whatever.png" alt="začetna postavitev avtobusa - runda 2" class="min-w-[150%] min-h-[150%] object-cover m-[-25%]" />
                 <p>
                     Pri prvi karti igralec ugane višje, in ker je 5 višja od 2, se premakne na naslednjo karto. Igralec ponovno ugane višje, 10 je višja od 5, spet se premakne naprej. Pri kralju igralec ugane višje, vendar ker je izvlečen as, se igralec 
                     vrne na prvo karto (sedaj bo to 5), in spije 6 požirkov.
                 </p>
-                <img src="../../bus_whatever_2.png" alt="začetna postavitev avtobusa - runda 2" class="w-1/3 md:w-1/5 lg:w-1/6 xl:w-1/8 h-auto mx-auto" />
+                <img src="../../bus_whatever_2.png" alt="začetna postavitev avtobusa - runda 2" class="min-w-[150%] min-h-[150%] object-cover mt-[-25%] ml-[-25%] mr-[-25%]"/> <!-- FIX ka en content gre won -->
                 <p>
                     Igra se tako nadaljuje naprej. V naslednjem krogu so postavljene le 3 karte, vendar je faktor množenja <code>x3</code> itd. Tako kot pri piramidi, je tudi pri avtobusu na koncu, ko je v vrsti le ena karta,
                     faktor množenja <code>x10</code>
@@ -209,7 +208,7 @@
             </p>
             <div appMathjax="$$ EV = \sum_{n=2}^{4} P_{nivo_n} \cdot w_n + P_{nivo_{5}} \cdot 10 $$"></div>
             <p>
-                Kjer je <code>EV</code> - expected value (pričakovana vrednost), <code>P<sub>nivo</sub></code> pa verjetnost, da se as pojavi na nivoju <code>n</code>.
+                Kjer je <code>EV</code> - expected value (pričakovana vrednost), <code>w<sub>n</sub></code> faktor množitve požirkov na nivoju <code>n</code> in <code>P<sub>nivo</sub></code> pa verjetnost, da se as pojavi na nivoju <code>n</code>.
             </p>
             <p>
                 Tako smo izračunali, da če z asom počakamo na kasnejše nivoje, je pričakovan izkoristek asa v povprečju 1.778krat večji od tistega enega požirka, ki bi ga dobili na voljo, če bi as položili takoj v prvem nivoju. 
