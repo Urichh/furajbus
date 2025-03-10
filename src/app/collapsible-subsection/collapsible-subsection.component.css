@@ -1,6 +1,8 @@
 .collapsible-container {
     border: none;
     overflow: hidden;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
   
 .title-bar {
