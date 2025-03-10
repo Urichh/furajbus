@@ -45,7 +45,8 @@
                 Busmaster postavi trikotnik (piramido) iz premešanega kupčka navadnih igralnih kart, katere so obrnjene z hrbtno stranjo navzgor, kot prikazuje spodnja slika:
             </p>
             <img src="../../karte_backside_full.png" alt="zakrite karte" class="" />
-            <p>
+            <br />
+            <p class="mb-[1vh]">
                 V navodilih predpostavljamo, da bo piramida visoka <code>5</code> kart, vendar je višina poljubna. V primeru večjega števila igralcev, je višino piramide smiselno povečati.
             </p>
             <p>
@@ -56,12 +57,12 @@
         <app-collapsible-section [title]="'Začetek igre'" id="zacetek">
             <p>Ko je piramida enkrat postavljena in so karte razdeljene med igralce, se igra lahko prične. Busmaster začne postopoma odkrivati karte piramide od najnižjega nivoja naprej, od leve proti desni. Vizualizacija:</p>
             <img src="../../karte_backside_most.png" alt="odprta prva karta" class="" />
-            <p>Ko busmaster odpre karto, začne odštevati od 5. Igralci lahko ustrezne karte na mizo odlagajo dokler busmaster ne odšteje do 0.</p>
-            <h2>Katere karte so ustrezne?</h2>
-            <p>Pri tej igri je relevantna le številka karte. Npr: če je odkrita križeva 2 (kot na sliki), lahko nanjo položimo katerokoli karto s številko 2, ne glede na barvo/simbol. <b>POZOR:</b> Edina izjema je joker, katerega lahko položimo na katerokoli karto, vendar ga je zato smiselno varčevati za bližje koncu igre, iz razlogov do katerih še pridemo</p>
-            <p>
-                Če ni bilo odložene nobene karte, ko busmaster prešteje do 0, enostavno nadaljujemo z naslednjo karto. V primeru, da so bile karte odložene pa igralec, ki je <b>ZADNJI</b> odložil karto razdeli požirke med preostale igralce, po pravilih katere bomo razložili v naslednjem poglavju.
-                <b>POMEMBNO:</b> Ko prvi igralec položi karto, lahko busmaster preneha odštevati. Od te točke naprej lahko preostali igralci še vedno polagajo karte na kup, dokler se eden od igralcev, kateremu je bilo dodeljeno pitje, ne takne ustnic z pločevinko/kozarcem (tudi če je preminulo že >5 sekund).
+            <p class="mb-[1vh]">Ko busmaster odpre karto, začne odštevati od 5. Igralci lahko ustrezne karte na mizo odlagajo dokler busmaster ne odšteje do 0.</p>
+            <h2 class="mb-[1vh] text-lg font-bold">Katere karte so ustrezne?</h2>
+            <p class="mb-[1vh]">Pri tej igri je relevantna le številka karte. Npr: če je odkrita križeva 2 (kot na sliki), lahko nanjo položimo katerokoli karto s številko 2, ne glede na barvo/simbol. Edina izjema je joker, katerega lahko položimo na katerokoli karto, vendar ga je zato smiselno varčevati za bližje koncu igre, iz razlogov do katerih še pridemo</p>
+            <p class="mb-[1vh]">
+                Če ni bilo odložene nobene karte, ko busmaster prešteje do 0, enostavno nadaljujemo z naslednjo karto. V primeru, da so bile karte odložene pa igralec, ki je <b>zadnji</b> odložil karto razdeli požirke med preostale igralce, po pravilih katere bomo razložili v naslednjem poglavju.
+                <b>Pomembno:</b> Ko prvi igralec položi karto, lahko busmaster preneha odštevati. Od te točke naprej lahko preostali igralci še vedno polagajo karte na kup, dokler se eden od igralcev, kateremu je bilo dodeljeno pitje, ne takne ustnic z pločevinko/kozarcem (tudi če je preminulo že >5 sekund).
                 V naslednjih primerih:
             </p>
 
@@ -71,35 +72,36 @@
                 <li>Igralec položi neustrezno karto</li>
             </ul>
 
-            <p>Pa mora igralec, ki je storil napako, za kazen spiti vse požirke, katerih so preostali igralci oproščeni.</p>
+            <p class="mt-[1vh]">Pa mora igralec, ki je storil napako, za kazen spiti vse požirke, katerih so preostali igralci oproščeni.</p>
 
-            <app-collapsible-subsection [title]="'Primer za lažjo predstavo'" id="primer1">
+            <app-collapsible-subsection [title]="'Primer'" id="primer1">
                 <p>
                     Predpostavimo, da imamo <code>4</code> igralce: <code>A</code>, <code>B</code>, <code>C</code> in <code>D</code>.
                     Busmaster (<code>A</code>) najprej odpre prvo karto, in začne odštevati od 5.
-                    <img src="../../karte_backside_most.png" alt="odprta prva karta" class="" />
+                    <img src="../../karte_backside_most.png" alt="odprta prva karta" class="mb-[1vh]" />
                     Igralec <code>B</code> nato odloži srčevo 2, zaradi česar busmaster preneha z odštevanjem. 
-                    <img src="../../karte_first.png" alt="odprta prva karta" class="" />
+                    <img src="../../karte_first.png" alt="odprta prva karta" class="mb-[1vh]" />
                     Ker je igralec <code>B</code> odložil zadnjo (in edino) karto, lahko dodeli 1 požirek enemu od igralcev (razloženo v poglavju <a href="#racunanje" class="text-black-500 underline hover:text-gray-500">računanje požirkov</a>). Recimo, da igralec <code>B</code> požirek dodeli igralcu <code>C</code>.
                     Igralec <code>C</code> vzdigne kozarec, da bi naredil požirek, vendar preden se z kozarcem takne ustnic, igralec <code>C</code> odloži novo karto: pikovo 2.
-                    <img src="../../karte_second.png" alt="položena druga karta" class="" />
+                    <img src="../../karte_second.png" alt="položena druga karta" class="mb-[1vh]" />
                     Kljub temu, da je pred kratkim igralec <code>B</code> naročil požirek igralcu <code>C</code>, se ta ukaz nemudoma razveljavi, in igralcu <code>C</code> ni treba narediti požirka (razen če mu ga igralec <code>D</code> ponovno dodeli). Sedaj ima igralec <code>D</code> (ki je odložil zadnjo karto), na voljo 2 požirka za dodelitev.
-                    Odloči se dodelitvi enega požirka igralcu <code>B</code>, in enega igralcu <code>A</code> (lahko bi tudi oba dodelil le enemu igralcu). Ko se katerikoli od izbranih igralcev z pločevinko/kozarcem dotakne ustnic, nihče ne more več dodajati kart na trenutno karto. Trenutna "runda" je zaključena, in nadaljuje se na naslednjo karto.
+                    Odloči se dodelitvi enega požirka igralcu <code>B</code>, in enega igralcu <code>A</code> (lahko bi tudi oba dodelil le enemu igralcu). 
+                    Ko se katerikoli od izbranih igralcev z pločevinko/kozarcem dotakne ustnic, nihče ne more več dodajati kart na trenutno karto. Trenutna "runda" je zaključena, in nadaljuje se na naslednjo karto.
                 </p>
             </app-collapsible-subsection>
         </app-collapsible-section>
 
         <app-collapsible-section [title]="'Računanje požirkov'" id="racunanje">
-            <p>
+            <p class="mb-[1vh]">
                 Število požirkov, ki jih ima za dodeljevanje na voljo igralec, ki je zadnji položil karto, je odvisna od števila kart ter trenutnim nivojem piramide.
                 Formula za izračun: <code>p=k*i</code>, kjer je p = števio požirkov, k = številu kart na kupu (brez originalne) ter i = trenutni nivo piramide.
                 Edina izjema je zadnji nivo, kjer je faktor množenja = <code>2*h</code>, kjer je h = višina piramide! Npr. pri standardni igri, z piramido višine <code>5</code>, je ta faktor <code>10</code>.
              </p>
-             <p>
+             <p class="mb-[1vh]">
                 Igralec, ki deli požirke, jih med igralce lahko razdeli poljubno. Lahko da vse požirke enemu igralcu, lahko vsakemu enega, ali pa kombinira <code>x</code> požirkov enemu igralcu, <code>y</code> drugemu, <code>z</code> tretjemu itd.
                 Pomembno je samo to, da je seštevek požirkov enak izračunanem številu.
              </p>
-            <p>
+            <p class="mb-[1vh]">
                 Igralec, kateremu je bilo dodeljeno število požirkov, ki je večje od 10, se lahko odloči, da skupine po 10 požirkov zamenja za shote 0.03L žgane pijače (40% alk.). Npr. 20 požirkov lahko zamenja za 2 shota.
             </p>
             <app-collapsible-subsection [title]="'Primer'">
@@ -120,14 +122,14 @@
         <app-collapsible-section [title]="'Avtobus'" id="avtobus">
            <p>Ko je enkrat določen igralec, ki gre na avtobus, busmaster ponovno zmeša kupček kart, in jih <code>5</code> odkritih postavi v horizontalno vrsto, kot prikazuje spodnja slika.</p>
            <img src="../../bus_init.png" alt="začetna postavitev avtobusa" class="min-w-[150%] min-h-[150%] object-cover m-[-25%]" />
-           <p>
+           <p class="mb-[1vh]">
                 Igralec začne na skrajno levi karti, in se premika proti desni. Pri vsaki karti busmaster igralca vpraša, če meni da bo karta, katero bo na slepo vlekel iz vrha kupa, višja ali nižja od trenutne karte.
                 Če igralec ugane pravilno, nadaljuje naprej na naslednjo karto, kjer ponovno ugiba. Če pa se igralec zmoti, pa ponovno začne na prvi karti na skrajno levi, in spije število požirkov, 
                 ki je enako "globini" avtobusa (v prvi rundi, ko je na mizi 5 kart, je to globina 1) zmnoženi z zaporednim številom kart, na kateri se je zmotil. Če se igralec vrne na začetek se od tam naprej upošteva 
                 zadnja karta na vrhu "kupa", in ne ponovno originalna karta. V primeru, da je izvlečena karta istega števila kot karta pod njo, se igralec lahko ponovno odloči za višje/nižje, medtem ko busmaster povleče naslednjo karto.
                 Tako kot pri prejšnji fazi igre, tudi tukaj velja, da je <code>2</code> najnižja karta, <code>joker</code> pa najvišja.
            </p>
-           <p>
+           <p class="mb-[1vh]">
                 Ko igralec uspešno prispe do konca vrste in pravilno ugane peto karto, busmaster ponovno postavi avtobus, le da tokrat z eno kart manj. Ta proces ponavljajte, dokler na mizi ni le ena karta, in jo igralec pravilno ugane.
                 Tako kot pri piramidi, je tudi na avtobusu število požirkov odvisno od globine avtobusa:
            </p>
@@ -136,7 +138,7 @@
                 <li>2. nivo (4 karte) - faktor x2</li>
                 <li>...</li>
            </ul>
-            <p>Tako kot pri piramidi višine 5, je tudi na avtobusu faktor množitve pri zadnji globini (5. nivo oz. 1 karta) enak <code>x10</code>. Igralec lahko tudi na avtobusu skupine po 10 požirkov menja za shote</p>
+            <p class="mb-[1vh] mt-[1vh]">Tako kot pri piramidi višine 5, je tudi na avtobusu faktor množitve pri zadnji globini (5. nivo oz. 1 karta) enak <code>x10</code>. Igralec lahko tudi na avtobusu skupine po 10 požirkov menja za shote</p>
 
            <app-collapsible-subsection [title]="'Primer'" id="primer2">
                 <p>Busmaster najprej postavi avtobus z <code>5</code> kartami in igralec začne na skrajno levi karti (označeno z puščico).</p>
@@ -173,43 +175,43 @@
         </app-collapsible-section>
 
         <app-collapsible-section [title]="'Strategije & zanimivosti'" id="zanimivosti">
-            <p>
+            <p class="mb-[1vh]">
                 Najprej predstavimo nekaj osnovnih lastnosti piramide, ki nam bodo pomagale kasneje.
             </p>
-            <p>
+            <p class="mb-[1vh]">
                 Število kart na vsakem nivoju piramide lahko definiramo z: <code>n<sub>i</sub>=h-i+1</code>,
                 število vseh kart: <code>n=2<sup>h</sup>-1</code> in višina piramide: 
                 <code>h=log<sub>2</sub>(n+1)+1=h</code>, kjer je n = št. kart, i = nivo (oz. "nadstropje") piramide in h = višina piramide. 
             </p>
-            <h2>Se karto splača položiti takoj, ali je bolje počakati?</h2>
-            <p>
+            <h2 class="mb-[1vh] text-lg font-bold">Se karto splača položiti takoj, ali je bolje počakati?</h2>
+            <p class="mb-[1vh]">
                 Predpostavimo, da igramo s standardnim kupčkom kart, v katerem je 54 kart (4 vsakega števila + 2 jokerja), in da je piramida višine 5 (skupno 15 kart v piramidi). Vsak igralec dobi 5 kart.
                 Zanima nas, če je bolje karto nemudoma položiti, ko vidimo ujemanje, ali je bolje počakati in upati, da se karta ponovno pojavi na višjem nivoju, kjer je faktor množitve večji.
             </p>
-            <p>
+            <p class="mb-[1vh]">
                 Recimo, da se odpre prva karta prve vrste, in ta karta je as. Mi imamo le en as v roki, in nas zanima ali ga je bolje v tej rundi položiti, ali počakati če se ponovno pojavi kasneje.
             </p>
-            <p>
+            <p class="mb-[1vh]">
                 Najprej izračunamo število neznanih kart. Vseh kart v kupčku je 54, od tega jih je 15 v piramidi, in ena od njih je že odkrita. Poleg tega poznamo še 4 ostale karte, saj so v naši roki, in vemo da zagotovo niso as.
                 Torej, lahko izračunamo št. neznanih kart: <code>N<sub>neznanih</sub>=54-(15+1+4)=34</code>
             </p>
-            <p>
+            <p class="mb-[1vh]">
                 Ker nas zanima, ali se bo as ponovno pojavil v višjem nivoju, kjer bo št. požirkov nato večje, želimo izračunati možnost, da se vsaj eden od preostalih dveh asov pojavi v drugem, tretjem, četrtem ali petem nivoju piramide. 
                 Verjetnost, da se as <b>ne</b> pojavi v teh nivojih piramide, lahko izračunamo s pomočjo hipergeometrijske porazdelitve, in jo nato negiramo, da dobimo verjetnost vsaj ene pojavitve asa. 
                 Vemo, da sta v kupčku kart še 2 asa in 32 ne-asov. Prav tako vemo, da je število neodkritih kart na nivojih 2-5: <code>∑n<sub>i</sub>=10</code><!-- dadej limite sumacij -->
             </p>
-            <p>
+            <p class="mb-[1vh]">
                 Te vrednosti vstavimo v hipergeometrijsko formulo, in vidimo, da je verjetnost, da se v 10ih kartah ki so na nivojih 2-5 pojavi vsaj en as: 
             </p> 
             <div appMathjax="$$ P_{as} = 1 - \frac{\binom{32}{10}}{\binom{34}{10}} = 0.508 $$"></div>
-            <p>
+            <p class="mb-[1vh]">
                 Nato nas zanima pričakovana vrednost požirkov, ki nam jih bo as prinesel, če z njim počakamo na 2. ali kasnejši nivo. Pričakovano vrednost lahko izračunamo:
             </p>
             <div appMathjax="$$ EV = \sum_{n=2}^{4} P_{nivo_n} \cdot w_n + P_{nivo_{5}} \cdot 10 $$"></div>
-            <p>
+            <p class="mb-[1vh]">
                 Kjer je <code>EV</code> - expected value (pričakovana vrednost), <code>w<sub>n</sub></code> faktor množitve požirkov na nivoju <code>n</code> in <code>P<sub>nivo</sub></code> pa verjetnost, da se as pojavi na nivoju <code>n</code>.
             </p>
-            <p>
+            <p class="mb-[1vh]">
                 Tako smo izračunali, da če z asom počakamo na kasnejše nivoje, je pričakovan izkoristek asa v povprečju 1.778krat večji od tistega enega požirka, ki bi ga dobili na voljo, če bi as položili takoj v prvem nivoju. 
                 Ta kalkulacija seveda predpostavlja, da so vsi igralci v igri striktno racionalni, in se bodo držali istih načel, kar pa seveda verjetno ni res. Če nek drug igralec položi asa v prvi vrsti, se verjetnost ponovne pojavitve asa 
                 drastično zmanjša, prav tako pa bi bilo pogosto bolj smiselno položiti asa v nižjih nivojih, če je že več igralcev položilo svojega na trenutni karti, saj lahko tako kvantiteta kart na kupu preseže doprinos večjega faktorja množitve na višjih nivojih. 
