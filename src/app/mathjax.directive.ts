@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Input, AfterViewInit } from '@angular/core';
+/*import { Directive, ElementRef, Input, AfterViewInit } from '@angular/core';
 
 @Directive({
   selector: '[appMathjax]'
@@ -16,4 +16,4 @@ export class MathjaxDirective implements AfterViewInit {
     this.el.nativeElement.innerHTML = this.appMathjax;
     (window as any).MathJax.typesetPromise();
   }
-}
+}*/

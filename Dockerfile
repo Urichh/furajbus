@@ -1,15 +1,12 @@
-FROM node:20 AS build
+FROM node:20-alpine AS runtime
 
 WORKDIR /app
-COPY package.json package-lock.json ./
-RUN npm install
-COPY . .
-RUN npm run build --configuration=production
 
-FROM nginx:latest
-COPY --from=build /app/dist/furajbus /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY dist/ /app/dist/
+COPY package*.json ./
 
-EXPOSE 80
+RUN npm install --only=production
 
-CMD ["nginx", "-g", "daemon off;"]
+EXPOSE 4000
+
+CMD ["node", "dist/furajbus/server/server.mjs"]
