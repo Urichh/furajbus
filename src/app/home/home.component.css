@@ -24,3 +24,11 @@ ul {
     border-bottom: 2px solid black;
     transform: translateY(-50%);
 }
+
+/*
+currently unused
+
+.mjx-block {
+    font-size: 1.5em;
+}
+*/
