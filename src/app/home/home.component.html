@@ -16,9 +16,10 @@
                 <li class="mb-2">3. <a href="#zacetek" class="text-black-500 underline hover:text-gray-500">Začetek igre</a></li>
                 <li class="indented mb-2">3.1 <a href="#primer1" class="text-black-500 underline hover:text-gray-500">Primer</a></li>
                 <li class="mb-2">4. <a href="#racunanje" class="text-black-500 underline hover:text-gray-500">Računanje požirkov</a></li>
+                <li class="indented mb-2">4.1 <a href="#primer2" class="text-black-500 underline hover:text-gray-500">Primer</a></li>
                 <li class="mb-2">5. <a href="#zakljucek" class="text-black-500 underline hover:text-gray-500">Zaključek igre</a></li>
                 <li class="mb-2">6. <a href="#avtobus" class="text-black-500 underline hover:text-gray-500">Avtobus</a></li>
-                <li class="indented mb-2">6.1 <a href="#primer2" class="text-black-500 underline hover:text-gray-500">Primer</a></li>
+                <li class="indented mb-2">6.1 <a href="#primer3" class="text-black-500 underline hover:text-gray-500">Primer</a></li>
                 <li class="">7. <a href="#zanimivosti" class="text-black-500 underline hover:text-gray-500">Zanimivosti & strategije</a></li>
             </ul>
         </app-collapsible-section>
@@ -104,7 +105,7 @@
             <p class="mb-[1vh]">
                 Igralec, kateremu je bilo dodeljeno število požirkov, ki je večje od 10, se lahko odloči, da skupine po 10 požirkov zamenja za shote 0.03L žgane pijače (40% alk.). Npr. 20 požirkov lahko zamenja za 2 shota.
             </p>
-            <app-collapsible-subsection [title]="'Primer'">
+            <app-collapsible-subsection [title]="'Primer'" id="primer2">
                 <img src="../../karte_3.png" alt="primer izračuna požirkov" class="" style="margin-bottom: 25px" />
                 <img src="../../karte_4.png" alt="primer izračuna požirkov" class="" style="margin-bottom: 25px" />
                 <img src="../../karte_5.png" alt="primer izračuna požirkov" class="" style="margin-bottom: 25px" />
@@ -140,7 +141,7 @@
            </ul>
             <p class="mb-[1vh] mt-[1vh]">Tako kot pri piramidi višine 5, je tudi na avtobusu faktor množitve pri zadnji globini (5. nivo oz. 1 karta) enak <code>x10</code>. Igralec lahko tudi na avtobusu skupine po 10 požirkov menja za shote</p>
 
-           <app-collapsible-subsection [title]="'Primer'" id="primer2">
+           <app-collapsible-subsection [title]="'Primer'" id="primer3">
                 <p>Busmaster najprej postavi avtobus z <code>5</code> kartami in igralec začne na skrajno levi karti (označeno z puščico).</p>
                 <img src="../../bus_init.png" alt="začetna postavitev avtobusa" class="min-w-[150%] min-h-[150%] object-cover m-[-25%]" />
                 <p>
