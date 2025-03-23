@@ -1,0 +1,7 @@
+services:
+  my_service:
+    image: furajbus
+    container_name: furajbus
+    restart: unless-stopped
+    ports:
+      - "6969:4000"
